@@ -4,216 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <!-- EDIT: title, description, keywords -->
-  <title>Kristine Joy Fontanilla Natividad | Civil Engineer Graduate Portfolio</title>
-  <meta name="description" content="Portfolio of Kristine Joy Fontanilla Natividad, a Civil Engineering graduate specializing in structural design and construction management." />
-  <meta name="keywords" content="Kristine Joy Fontanilla Natividad, Portfolio, Civil Engineer, Structural Design, AutoCAD, Construction">
+  <title>Juan Dela Cruz | Civil Engineer Graduate Portfolio</title>
+  <meta name="description" content="Portfolio of Juan Dela Cruz, a Civil Engineering graduate specializing in structural design and construction management." />
+  <meta name="keywords" content="Juan Dela Cruz, Portfolio, Civil Engineer, Structural Design, AutoCAD, Construction">
   <link rel="icon" type="image/png" href="img/profile.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="main.css" rel="stylesheet">
-  <link href="gallery-lightbox.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- EDIT: put your GitHub Pages link -->
   <link rel="canonical" href="https://yourusername.github.io/" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
-
-  
-<style>
-  /* Project details popup */
-  .project-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .project-modal.active {
-    display: flex;
-  }
-
-  .project-modal-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.78);
-    backdrop-filter: blur(4px);
-  }
-
-  .project-modal-box {
-    position: relative;
-    z-index: 1;
-    width: min(650px, 100%);
-    max-height: 85vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    /* Hide scrollbar but retain scrolling */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
-    padding: 28px;
-    border-radius: 16px;
-
-    /* Default theme colors */
-    background: var(--card, #ffffff);
-    color: var(--text, #222222);
-
-    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
-    animation: projectModalOpen 0.25s ease;
-  }
-
-  .project-modal-box::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Project details inherit the popup text color */
-  .project-modal-box #projectModalBody,
-  .project-modal-box #projectModalBody h1,
-  .project-modal-box #projectModalBody h2,
-  .project-modal-box #projectModalBody h3,
-  .project-modal-box #projectModalBody h4,
-  .project-modal-box #projectModalBody p,
-  .project-modal-box #projectModalBody li,
-  .project-modal-box #projectModalBody span,
-  .project-modal-box #projectModalBody strong {
-    color: inherit;
-  }
-
-  /* Explicit text colors for Documentation Blog project details.
-     Uses the website's darkToggle button state, managed in JavaScript below. */
-  body:not(.dark-mode) .project-modal-box {
-    background: #ffffff;
-    color: #222222;
-  }
-
-  body.dark-mode .project-modal-box {
-    background: #202020;
-    color: #f5f5f5;
-  }
-
-  /* Make nested project text follow the selected theme */
-  body:not(.dark-mode) .project-modal-box #projectModalBody,
-  body:not(.dark-mode) .project-modal-box #projectModalBody h1,
-  body:not(.dark-mode) .project-modal-box #projectModalBody h2,
-  body:not(.dark-mode) .project-modal-box #projectModalBody h3,
-  body:not(.dark-mode) .project-modal-box #projectModalBody h4,
-  body:not(.dark-mode) .project-modal-box #projectModalBody p,
-  body:not(.dark-mode) .project-modal-box #projectModalBody li,
-  body:not(.dark-mode) .project-modal-box #projectModalBody span,
-  body:not(.dark-mode) .project-modal-box #projectModalBody strong {
-    color: #222222;
-  }
-
-  body.dark-mode .project-modal-box #projectModalBody,
-  body.dark-mode .project-modal-box #projectModalBody h1,
-  body.dark-mode .project-modal-box #projectModalBody h2,
-  body.dark-mode .project-modal-box #projectModalBody h3,
-  body.dark-mode .project-modal-box #projectModalBody h4,
-  body.dark-mode .project-modal-box #projectModalBody p,
-  body.dark-mode .project-modal-box #projectModalBody li,
-  body.dark-mode .project-modal-box #projectModalBody span,
-  body.dark-mode .project-modal-box #projectModalBody strong {
-    color: #f5f5f5;
-  }
-
-  /* Links remain visible in both themes */
-  .project-modal-box a {
-    color: #b88600;
-    text-decoration: underline;
-  }
-
-  body.dark-mode .project-modal-box a {
-    color: #e6b800;
-  }
-
-  /* Close button */
-  .project-modal-close {
-    position: sticky;
-    top: 0;
-    float: right;
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    margin: -12px -12px 8px 12px;
-    border: 0;
-    border-radius: 50%;
-    background: rgba(128, 128, 128, 0.22);
-    color: inherit;
-    font-size: 27px;
-    line-height: 1;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .project-modal-close:hover,
-  .project-modal-close:focus-visible {
-    background: #e6b800;
-    color: #111111;
-  }
-
-  .project-modal-box h2 {
-    margin: 0 35px 18px 0;
-  }
-
-  .project-modal-box h3 {
-    margin: 20px 0 8px;
-  }
-
-  .project-modal-box p {
-    margin: 0 0 12px;
-    line-height: 1.7;
-  }
-
-  
-/* Customize project image size when expanded */
-.project-modal-box img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: 380px;
-  object-fit: contain;
-  border-radius: 10px;
-  margin: 0 auto 20px;
-}
-
-
-  body.project-modal-open {
-    overflow: hidden;
-  }
-
-  .project-modal-content[hidden] {
-    display: none !important;
-  }
-
-  .project[onclick] {
-    cursor: pointer;
-  }
-
-  @keyframes projectModalOpen {
-    from {
-      opacity: 0;
-      transform: translateY(10px) scale(0.98);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .project-modal {
-      padding: 12px;
-    }
-
-    .project-modal-box {
-      padding: 22px;
-      max-height: 90vh;
-    }
-  }
-</style>
-
 </head>
 <body>
 
@@ -232,7 +32,7 @@
       </h1>
 
       <div class="sub location">
-        <i class="fa-solid fa-location-dot"></i> San Nicolas, Pangasinan, Philippines 2447
+        <i class="fa-solid fa-location-dot"></i> San Nicolas, Pangasinan, Philippines
       </div>
       <!-- Typing text: first letter here, the rest is in js/script.js -->
       <div class="sub role">
@@ -243,7 +43,7 @@
         <a class="btn primary" href="Resume.pdf" download>
           <i class="fa-solid fa-file-arrow-down"></i> Download Resume
         </a>
-        <a class="btn" href="mailto:kjfnnatividad@gmail.com">
+        <a class="btn" href="mailto:juan.delacruz@email.com">
           <i class="fa-solid fa-envelope"></i> Send Email
         </a>
         <a class="btn" href="tel:09000000000">
@@ -262,14 +62,14 @@
 
       <!-- Gallery -->
       <article class="card">
-        <div class="section-title"><h2><strong>My Services</strong></h2></div>
+        <div class="section-title"><h2>Engineering Designs</h2></div>
         <div class="experience-item">
           <div class="carousel">
             <div class="carousel-track">
-              <a href="fullscreen.html?img=img/design1.png"><img src="img/design1.png" alt="Construction project coordination"><span>Construction Project Coordination</span></a>
-              <a href="fullscreen.html?img=img/design2.png"><img src="img/design2.png" alt="Project document management"><span>Project Document Management</span></a>
-              <a href="fullscreen.html?img=img/design3.png"><img src="img/design3.png" alt="Construction administrative support"><span>Administrative Support</span></a>
-              <a href="fullscreen.html?img=img/design4.png"><img src="img/design4.png" alt="Basic Quantity and Cost Estimates"><span>Basic Quantity and Cost Estimates</span></a>
+              <a href="fullscreen.html?img=img/design1.png"><img src="img/design1.png" alt="Gallery 1"></a>
+              <a href="fullscreen.html?img=img/design2.png"><img src="img/design2.png" alt="Gallery 2"></a>
+              <a href="fullscreen.html?img=img/design3.png"><img src="img/design3.png" alt="Gallery 3"></a>
+              <a href="fullscreen.html?img=img/design4.png"><img src="img/design4.png" alt="Gallery 4"></a>
             </div>
             <div class="carousel-dots"></div>
           </div>
@@ -278,24 +78,21 @@
 
       <!-- About -->
       <article class="card">
-        <div class="section-title"><h2><strong>About</strong></h2></div>
-        <p class="lead">Motivated and detail-oriented Civil Engineering graduate majoring in Structural Engineering with strong communication, organizational, and problem-solving skills. Experienced in handling administrative tasks, customer service, stakeholder coordination, and team collaboration through academic projects and internship experience. Adaptable, flexible learner, and committed to delivering quality work while continuously developing professional skills in a multicultural workplace. </p>
+        <div class="section-title"><h2>About</h2></div>
+        <p class="lead">I am a Civil Engineering graduate from Your University. I am passionate about structural design, site planning, and sustainable construction.</p>
       </article>
 
-      <!-- Experience -->
+      <!-- On-the-Job Training -->
       <article class="card">
-        <div class="section-title"><h2><strong>Experience</strong></h2></div>
+        <div class="section-title"><h2>On-the-Job Training</h2></div>
         <div class="experience-item">
-          <h3><strong>Construction Project Management - Internship Training</strong></h3>
-          <h3><i>City Buildings and Architecture Office (CBAO) – Baguio City, PH</i></h3>
-          <p class="experience-text" style="margin-bottom: 6px;"></p>
-          <div class="meta"><i class="fa-regular fa-calendar-days"></i> March 2026 – May 2026</div>
+          <h3>Civil Engineering Intern — ABC Construction Corp.</h3>
+          <div class="meta"><i class="fa-regular fa-calendar-days"></i> Jan 2025 – Mar 2025</div>
           <ul style="margin-top:8px; color:var(--muted); font-size:14px; line-height:1.6; margin-left: 20px">
-            <li>Supported construction permit processing and engineering documentation by assisting engineers and professionals with project records and administrative requirements.</li>
-            <li>Organized, recorded, and properly filed reviewed construction and engineering documents, including building plans, permits, certificates, and technical records, for submission and safekeeping at the Records Office.</li>
-            <li>Maintained accurate records, registers, spreadsheets, and tracking systems to support document control, records retrieval, project monitoring, and regulatory compliance.</li>
-            <li>Participated in site inspections, documented field observations, and assisted in monitoring construction progress and permit compliance.</li>
-            <li>Coordinated with engineers, inspectors, clients, and other stakeholders regarding document submissions, permit processing, records, and project requirements.</li>
+            <li>Assisted in preparing structural plans and quantity take-offs.</li>
+            <li>Monitored site progress and prepared daily reports.</li>
+            <li>Conducted material testing and quality checks.</li>
+            <li>Coordinated with foremen and project engineers.</li>
           </ul>
         </div>
       </article>
@@ -305,124 +102,47 @@
         <div id="image-list" class="image-list"></div>
       </article>
 
-      <!-- Second image strip (moves the opposite way; images listed in js/script.js) -->
-      <article class="card" id="image-articles-section-2">
-        <div id="image-list-2" class="image-list"></div>
+      <!-- Projects -->
+      <article class="card">
+        <div class="section-title"><h2>Projects</h2></div>
+        <div class="experience-item">
+          <div class="projects-list">
+
+            <div class="project">
+              <img src="img/project1.jpg" alt="Thesis Project" class="project-img">
+              <div>
+                <strong>Flood-Resilient Housing</strong>
+                <div class="meta"><i class="fa-solid fa-globe"></i> Thesis: structural and drainage design — <a href="#" target="_blank">view project</a></div>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="img/project2.jpg" alt="Bridge Project" class="project-img">
+              <div>
+                <strong>Steel Truss Bridge Design</strong>
+                <div class="meta"><i class="fa-solid fa-globe"></i> STAAD Pro analysis and AutoCAD plates — <a href="#" target="_blank">view project</a></div>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="img/project3.jpg" alt="Building Project" class="project-img">
+              <div>
+                <strong>4-Storey Commercial Building</strong>
+                <div class="meta"><i class="fa-solid fa-globe"></i> Revit model and cost estimate — <a href="#" target="_blank">view project</a></div>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="img/project4.jpg" alt="Road Project" class="project-img">
+              <div>
+                <strong>Road Rehabilitation Plan</strong>
+                <div class="meta"><i class="fa-solid fa-globe"></i> Survey, alignment, and pavement design — <a href="#" target="_blank">view project</a></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </article>
-
-      
-<!-- Documentation Blog -->
-<article class="card">
-  <div class="section-title">
-    <h2><strong>Documentation Blog</strong></h2>
-  </div>
-
-  <div class="experience-item">
-    <div class="projects-list">
-
-      <!-- Project 1 -->
-      <div class="project" onclick="openProject(this)" role="button" tabindex="0"
-           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProject(this)}">
-        <img src="img/project1.jpg" alt="Outstanding Intern Award" class="project-img">
-        <div>
-          <strong class="project-title-centered">Outstanding Intern Award</strong>
-          <div class="meta">
-            <i class="fa-solid fa-globe"></i>
-            Thesis: structural and drainage design —
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               onclick="event.stopPropagation()">view project</a>
-          </div>
-        </div>
-        <div class="project-modal-content" hidden>
-          <h2>Outstanding Intern Award</h2>
-          <img src="img/project1.jpg" alt="Outstanding Intern Award">
-          <p>Award received for exceptional performance and contributions during the internship period.</p>
-          <h3>Key Focus</h3>
-          <p>Project management, documentation, and teamwork.</p>
-          <h3>Project Type</h3>
-          <p>Academic Thesis</p>
-          <a href="#" target="_blank" rel="noopener noreferrer">View Full Project</a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project" onclick="openProject(this)" role="button" tabindex="0"
-           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProject(this)}">
-        <img src="img/project2.jpg" alt="Leadership Competencies" class="project-img">
-        <div>
-          <strong class="project-title-centered">Leadership Competencies</strong>
-          <div class="meta">
-            <i class="fa-solid fa-globe"></i>
-            Leadership development and team management —
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               onclick="event.stopPropagation()">view project</a>
-          </div>
-        </div>
-        <div class="project-modal-content" hidden>
-          <h2>Leadership Competencies</h2>
-          <img src="img/project2.jpg" alt="Leadership Competencies">
-          <p>Appointed as Governor for the School Department.</p>
-          <h3>Tools</h3>
-          <p>STAAD Pro and AutoCAD.</p>
-          <h3>Key Focus</h3>
-          <p>Structural analysis, load considerations, and technical drawing preparation.</p>
-          <a href="#" target="_blank" rel="noopener noreferrer">View Full Project</a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project" onclick="openProject(this)" role="button" tabindex="0"
-           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProject(this)}">
-        <img src="img/project3.jpg" alt="Courseworks Excellence" class="project-img">
-        <div>
-          <strong class="project-title-centered">Courseworks Excellence</strong>
-          <div class="meta">
-            <i class="fa-solid fa-globe"></i>
-            Revit model and cost estimate —
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               onclick="event.stopPropagation()">view project</a>
-          </div>
-        </div>
-        <div class="project-modal-content" hidden>
-          <h2>Courseworks Excellence</h2>
-          <img src="img/project3.jpg" alt="Courseworks Excellence">
-          <p>A project showcasing excellence in courseworks, including a detailed Revit model and cost estimate.</p>
-          <h3>Tools</h3>
-          <p>Autodesk Revit.</p>
-          <h3>Key Focus</h3>
-          <p>Building visualization, design coordination, and cost planning.</p>
-          <a href="#" target="_blank" rel="noopener noreferrer">View Full Project</a>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project" onclick="openProject(this)" role="button" tabindex="0"
-           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProject(this)}">
-        <img src="img/project4.jpg" alt="Life Outside The University" class="project-img">
-        <div>
-          <strong class="project-title-centered">Life Outside The University</strong>
-          <div class="meta">
-            <i class="fa-solid fa-globe"></i>
-            Leadership development, community engagement, and personal growth —
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               onclick="event.stopPropagation()">view project</a>
-          </div>
-        </div>
-        <div class="project-modal-content" hidden>
-          <h2>Life Outside The University</h2>
-          <img src="img/project4.jpg" alt="Life Outside The University">
-          <p>A project showcasing the student's involvement in extracurricular activities and community service.</p>
-          <h3>Key Focus</h3>
-          <p>Leadership development, community engagement, and personal growth.</p>
-          <h3>Project Type</h3>
-          <p>Extracurricular Activity</p>
-          <a href="#" target="_blank" rel="noopener noreferrer">View Full Project</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</article>
 
     </section>
 
@@ -431,85 +151,69 @@
 
       <!-- Education -->
       <article class="card">
-        <div class="section-title"><h2><strong>Education</strong></h2></div>
+        <div class="section-title"><h2>Education</h2></div>
         <div class="experience-item">
-          <h3><strong>Bachelor of Science in Civil Engineering</strong></h3>
-          <h3><i>Major in Structural Engineering</i></h3>
-          <p class="experience-text" style="margin-bottom: 6px;"></p>
-          <div class="meta"><i class="fa-regular fa-calendar-days"></i> Aug 2022 – Sept 2026</div>
+          <h3>Bachelor of Science in Civil Engineering — Your University</h3>
+          <div class="meta"><i class="fa-regular fa-calendar-days"></i> Jul 2021 – Jul 2025</div>
         </div>
+      </article>
+
+      <!-- Achievements -->
+      <article class="card">
+        <div class="section-title"><h2>Achievements</h2></div>
+        <ul style="margin-top:8px; color:var(--muted); font-size:14px; line-height:1.6; margin-left: 20px;">
+          <li>2025 – Best Thesis</li>
+          <li>2024 – Dean's Lister</li>
+          <li>2024 – Structural Design Competition Finalist</li>
+          <li>2023 – Concrete Cube Challenge Champion</li>
+        </ul>
       </article>
 
       <!-- Certifications -->
       <article class="card">
-        <div class="section-title"><h2><strong>Certifications</strong></h2></div>
+        <div class="section-title"><h2>Certifications</h2></div>
         <div class="experience-item">
-          <h4><strong>Safety Officer 2 (SO2) Certification</strong></h4>
-          <h3><i>Construction Occupational Safety and Health (COSH) Training</i></h3>
-          <p class="experience-text" style="margin-bottom: 6px;"></p>
-          <div class="meta"><i class="fa-regular fa-calendar-days"></i> August 2025</div>
-        </div>
-
-        <div class="experience-item">
-          <h4><strong>Bluebeam</strong></h4>
-          <h3><i>Construction Occupational Safety and Health (COSH) Training</i></h3>
-          <p class="experience-text" style="margin-bottom: 6px;"></p>
-          <div class="meta"><i class="fa-regular fa-calendar-days"></i> August 2026</div>
+          <h3><i class="fa-solid fa-trophy"></i> Civil Engineer Licensure Examination – Passer</h3>
+          <div class="meta"><i class="fa-regular fa-calendar-days"></i> Add license number or date</div>
         </div>
       </article>
 
-      <!-- Skills & Tools -->
+      <!-- Skills -->
       <div class="card">
-        <div class="section-title"><h2><strong>Skills & Tools</strong></h2></div>
+        <div class="section-title"><h2>Skills</h2></div>
         <div class="stack">
           <span class="chip"><i class="fa-solid fa-compass-drafting"></i> AutoCAD</span>
-          <span class="chip"><i class="fa-solid fa-users"></i> Google Workspace Apps</span>
-          <span class="chip"><i class="fa-solid fa-users"></i> Microsoft 365 Apps</span>
-          <span class="chip"><i class="fa-solid fa-list-check"></i> Microsoft Project</span>
+          <span class="chip"><i class="fa-solid fa-building"></i> Revit</span>
+          <span class="chip"><i class="fa-solid fa-bridge"></i> STAAD Pro</span>
+          <span class="chip"><i class="fa-solid fa-cube"></i> SketchUp</span>
+          <span class="chip"><i class="fa-solid fa-list-check"></i> MS Project</span>
+          <span class="chip"><i class="fa-solid fa-table"></i> Excel</span>
+          <span class="chip"><i class="fa-solid fa-ruler-combined"></i> Land Surveying</span>
           <span class="chip"><i class="fa-solid fa-calculator"></i> Quantity Estimation</span>
           <span class="chip"><i class="fa-solid fa-helmet-safety"></i> Site Supervision</span>
-          <span class="chip"><i class="fa-solid fa-helmet-safety"></i> Document Control</span>
           <span class="chip"><i class="fa-solid fa-brain"></i> Problem-Solving</span>
+          <span class="chip"><i class="fa-solid fa-bug"></i> Troubleshooting</span>
           <span class="chip"><i class="fa-solid fa-users"></i> Team Collaboration</span>
         </div>
       </div>
 
       <!-- References -->
       <article class="card">
-        <div class="section-title"><h2><strong>References</strong></h2></div>
+        <div class="section-title"><h2>References</h2></div>
         <div class="experience-item">
-
-          <h><strong>Engr. Ramon P. Villanueva</strong></p></h4>
-            <h3>Professional Civil Engineer - Supervisor</h3>
-            <p class="experience-text" style="margin-bottom: 6px;"></p>  
-            <h3><span><i>(Contact: Available upon request)</i></span></h3>
-
-        </div>
-
-        <div class="experience-item">
-
-            <h3><strong>Engr. Jay-R N. Galwardo</strong></h3>
-            <h3>Professional Civil Engineer - Instructor</h3>
-            <p class="experience-text" style="margin-bottom: 6px;"></p>  
-            <h3><span><i>(Contact: Available upon request)</i></span></h3>
-          
-        </div>
-
-        <div class="experience-item">
-
-          <h3><strong>Engr. Lyan Ruth R. Santiago</strong></h3>
-            <h3>Professional Civil Engineer - Mentor</h3>
-            <p class="experience-text" style="margin-bottom: 6px;"></p>  
-            <h3><span><i>(Contact: Available upon request)</i></span></h3>
-
+          <ul style="margin-top:2px; color:var(--muted); font-size:14px; line-height:1.6; margin-left: 20px;">
+            <li><strong>Engr. Lyan Ruth R. Santiago</strong><br>Professor, Your University<br><span>0900-000-0001</span></li>
+            <li><strong>Engr. Jay-R N. Galwardo</strong><br>Project Engineer, ABC Construction Corp.<br><span>0900-000-0002</span></li>
+            <li><strong>Engr. Daishit Nungaulitapilyidonun?</strong><br>Thesis Adviser, Your University<br><span>0900-000-0003</span></li>
+          </ul>
         </div>
       </article>
 
       <!-- Contact -->
       <div class="card">
-        <div class="section-title"><h2><strong>Contact</strong></h2></div>
+        <div class="section-title"><h2>Contact</h2></div>
         <div class="contact-item"><a class="btn" href="tel:09177355407"><i class="fa-solid fa-phone"></i> 0917 735 5407</a></div>
-        <div class="contact-item"><a class="btn" href="mailto:kjfnnatividad@gmail.com"><i class="fa-solid fa-envelope"></i>kjfnnatividad@gmail.com</a></div>
+        <div class="contact-item"><a class="btn" href="mailto:kristinejoynatividad113@gmail.com"><i class="fa-solid fa-envelope"></i>kristinejoynatividad113@gmail.com</a></div>
         <div style="margin-top:12px">
           <a class="btn" href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
           <a class="btn" href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
@@ -525,9 +229,9 @@
 
   <!-- Footer -->
   <footer>
-    Designed by: Kurisutin 
+    Designed by: Aequise
     <br>
-    © 2026 Kristine Joy Fontanilla Natividad – All Rights Reserved.
+    © 2025 JRDPimentel – All Rights Reserved.
   </footer>
 </div>
 
@@ -535,17 +239,6 @@
 <a href="https://m.me/your.username" target="_blank" class="floater-messenger">
   <i class="fa-brands fa-facebook-messenger"></i>
 </a>
-
-<!-- Project Details Modal -->
-<div class="project-modal" id="projectModal" aria-hidden="true">
-  <div class="project-modal-overlay" onclick="closeProject()"></div>
-  <div class="project-modal-box" role="dialog" aria-modal="true"
-       aria-labelledby="projectModalTitle">
-    <button class="project-modal-close" type="button" onclick="closeProject()"
-            aria-label="Close project details">&times;</button>
-    <div id="projectModalBody"></div>
-  </div>
-</div>
 
 <script src="js/script.js"></script>
 
@@ -560,6 +253,5 @@
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Your University" }
 }
 </script>
-
 </body>
 </html>
